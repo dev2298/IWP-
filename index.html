@@ -1,0 +1,282 @@
+<html>
+<head>
+<title>TRAVEL POOLING</title>
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<style>
+
+body,h2{font-family: "Lato", sans-serif;}
+
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2{
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('adr.jpg');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("alone.jpg");
+    min-height: 400px;
+}
+
+
+.w3-wide {letter-spacing: 10px;}
+
+
+.foot{
+    background-color:#333;
+    color:white;
+    text-align:center;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    margin-top: 2px;
+    margin-bottom: 4px;
+    resize: vertical;
+}
+input[type=mail], select, textarea {
+    width: 100%;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    margin-top: 2px;
+    margin-bottom: 4px;
+    resize: vertical;
+}
+
+
+input[type=submit] {
+    background-color: grey;
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+
+}
+
+input[type=submit]:hover {
+    background-color: black;
+}
+
+.container {
+    border-radius: 2px;
+    background-color: #f2f2f2;
+    padding: 8px;
+
+}
+
+
+/* Slideshow container */
+.ssimg {
+  width: 100%;
+  height:90ex;
+}
+
+.prado{
+    background-color: black;
+    width:100%;
+    border: 10px solid white;
+}
+
+/* Caption text */
+.text {
+  color:darkslategray;
+  font-size: 5ex;
+  width: 100%;
+  text-align: center;
+}
+
+</style>
+</head>
+
+
+<body >
+<!-- Navbar (sit on top) -->
+<div  >
+  <div >
+
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#booking" class="w3-bar-item w3-button" target="_blank"><i class="fa fa-user"></i> BOOKING</a>
+    <a href="#travel_info" class="w3-bar-item w3-button"><i class="fa fa-th"></i> TRAVEL INFO</a>
+    <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+  </div>
+
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">TRAVELLING IS LIFE</span>
+  </div>
+</div>
+
+
+
+<!-- Header -->
+<header class="w3-display-container w3-content" id="booking" style="max-width:1500px;">
+  <img class="w3-image" src="meteora.jpg" alt="The Hotel" style="min-width:1000px; height:100%;" width="1500">
+  <div class="w3-display-left w3-padding w3-col l6 m8 " style="margin-left:400px;border-radius:50px;">
+    <div class="w3-container " style="background-color:blue;color:white;">
+      <h2><i class="fa fa-binoculars w3-margin-right" style="color:white;"></i>TRAVEL FORM</h2>
+    </div>
+       <div class="w3-container w3-white w3-padding-16">
+      <form method="post" action="/iwp_proj/insert_data.php">
+
+        <div class="w3-row-padding" style="margin:0 -16px;">
+		  <div>
+            <label><i class="fa fa-arrow-right"></i> NAME</label>
+            <input class="w3-input w3-border" type="text" placeholder="JOHN SMITH" name="NAME" size="200" required>
+          </div>
+          <div class="w3-half w3-margin-bottom">
+            <label><i class="fa fa-arrow-right"></i> FROM</label>
+            <input class="w3-input w3-border" type="text" placeholder="TRAVEL FROM" name="FROM" required>
+          </div>
+          <div class="w3-half">
+              <label><i class="fa fa-arrow-right"></i> DESTINATION</label>
+            <input class="w3-input w3-border" type="text" placeholder="TRAVEL TO" name="CheckOut" required>
+          </div>
+        </div>
+
+        <div class="w3-row-padding" style="margin:0 -16px;">
+         <div class="w3-half">
+            <label><i class="fa fa-male"></i> NUMBER OF TRAVELLER</label>
+          <input class="w3-input w3-border" type="text" value="1" name="numtraveller" min="0" max="6">
+          </div>
+          <div class="w3-half">
+              <label><i class="fa fa-taxi"></i> MODE OF TRANSPORTATION</label>
+                <select class="w3-input w3-border"  name="cars">
+                    <option style="background-color:beige; color:black;" value="Cab">Cab</option>
+                    <option style="background-color:beige; color:black;" value="Bus">Bus</option>
+                    <option style="background-color:beige; color:black;" value="Train">Train</option>
+                    <option style="background-color:beige; color:black;" value="Flight">Flight</option>
+                </select>
+          </div>
+        </div>
+
+        <div class="w3-row-padding" style="margin:15 -16px;">
+            <div class="w3-half">
+                <label><i class="fa fa-calendar"></i>DATE</label>
+                <input class="w3-input w3-border" placeholder="DD/MM/YYYY" type="date" name="date">
+            </div>
+            <div class="w3-half">
+              <label><i class="fa fa-clock-o"></i> TIME</label>
+                 <input class="w3-input w3-border" placaeholder="12:00 AM" type="time" name="time">
+            </div>
+        </div>
+
+        <div class="w3-row-padding" style="margin:15 -16px;">
+            <div class="w3-half">
+                <label><i class="fa fa-google"></i>EMAIL</label>
+                <input class="w3-input w3-border" placeholder="john@example.com" type="email" name="email">
+            </div>
+            <div class="w3-half">
+              <label><i class="fa fa-mobile"></i> MOBILE NUMBER</label>
+                 <input class="w3-input w3-border" type="text" name="mobile">
+            </div>
+        </div>
+
+         <div class="w3-row-padding" style="margin:15 -16px;">
+            <div class="w3-half">
+                <label>GENDER</label>
+                <input  type="radio" name="gender" value="male"><i class="fa fa-male"></i> MALE
+                <input  type="radio" name="gender" value="female"> <i class="fa fa-female"></i>FEMALE
+            </div>
+        </div>
+
+        <button class="w3-button w3-dark-grey" type="submit"> SUBMIT</button>
+      </form>
+    </div>
+  </div>
+</header>
+
+<!-- second Parallax Image with Logo Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">FIND A PARTNER TO TRAVEL AROUND THE WORLD</span>
+  </div>
+</div>
+
+<div id="travel_info">
+
+<div >
+  <img name="slide" class="ssimg">
+</div>
+
+
+</div>
+<br>
+
+
+<div class="prado" id="contact">
+  <p><h2 style="text-align:center;color:#f2f2f2;" >Feedback Form</h2>
+    <div class="container">
+      <form method="post" action="/iwp_proj/feedback.php">
+         <label for="fname">Name</label>
+         <input type="text" id="fname" name="name" placeholder="Your name.."><br>
+
+         <label for="emailid">Email-Id</label>
+         <input type="mail" id="emailid" name="emailid" placeholder="Your email-id.."><br>
+
+         <label for="subject">Message</label>
+         <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
+
+        <input type="submit" value="Submit">
+
+
+     </form>
+    </div>
+</div>
+
+<footer class="foot">
+    <p> &copy All rights reserver</p>
+</footer>
+
+<script>
+	var i = 0; // Start point
+	var images = [];
+	var time = 2000;
+	// Image List
+	images[0] = 'adl.jpg';
+	images[1] = 'adr.jpg';
+	images[2] = 'adult.jpg';
+
+	// Change Image
+	function changeImg(){
+		document.slide.src = images[i];
+
+		if(i < images.length - 1){
+			i++;
+		} else {
+			i = 0;
+		}
+
+		setTimeout("changeImg()", time);
+	}
+
+	window.onload = changeImg;
+
+</script>
+
+</body>
+</html>
